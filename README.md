@@ -8,6 +8,7 @@ Click on the "Pause" button to pause the timer.
 Click on the "Reset" button to reset the timer.
 Click on the "Full Screen" button to toggle full screen mode.
 When the timer ends, the website will display "Time's up!"
+
 Customizing the Timer
 By default, the Pomodoro Timer is set to 25 minutes for the pomodoro session, 5 minutes for the short break session, and 15 minutes for the long break session. You can customize these durations by editing the JavaScript code in the script.js file.
 
