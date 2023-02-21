@@ -22,4 +22,5 @@ Credits
 The design of the Pomodoro Timer website is inspired by the Pomofocus website.
 
 License
+
 This project is licensed under the MIT License. See the LICENSE file for details.
