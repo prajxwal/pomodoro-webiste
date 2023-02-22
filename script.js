@@ -14,7 +14,7 @@ let activeButton = "pomodoro";
 function startTimer(duration) {
   let timer = duration, minutes, seconds;
 
-  // Clear any existing timer interval
+  
   clearInterval(timerInterval);
 
   timerInterval = setInterval(function () {
