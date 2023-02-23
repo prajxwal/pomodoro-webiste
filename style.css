@@ -1,17 +1,20 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   text-align: center;
+  background: #000;
 }
 
 h1 {
   font-size: 50px;
   margin-top: 50px;
+  color: #ffffff;
 }
 
 #timer {
   font-size: 100px;
   margin-top: 50px;
-  margin: 0 auto; /* center the timer */
+  color: #ffffff;
+  margin: 0 auto; 
 }
 
 #buttons-container {
@@ -19,31 +22,31 @@ h1 {
   justify-content: center;
   align-items: center;
   margin-top: 50px;
-  margin: 0 auto; /* center the buttons */
+  margin: 0 auto; 
 }
+
 
 button {
   padding: 1.3em 3em;
   font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
+  letter-spacing: 2px;
   font-weight: 500;
-  color: #FFB100;
-  background-color: #000000 ;
+  color: #000;
+  background-color: #f1eeee ;
   border: none;
   border-radius: 45px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
-  font-family: monospace;
+  font-family: 'Space Grotesk', sans-serif;
   margin: 35px 10px;
 }
 
 button:hover {
-  background-color: #FFB100;
+  background-color: #000000;
   box-shadow: 0px 15px 20px rgb(208, 94, 236);
-  color: #000000;
+  color: #fdfafa;
   transform: translateY(-7px);
 }
 
@@ -56,3 +59,7 @@ button:active {
   bottom: 20px;
   right: 20px;
 }
+
+
+
+
