@@ -1,37 +1,42 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro Timer</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap" rel="stylesheet">
-    
-  </head>
-  <body>
-    <h1>Pomodoro Timer</h1>
-
-    <div class="buttons-container">
-      <button id="pomodoroButton">pomodoro</button>
-      <button id="shortBreakButton">short break</button>
-      <button id="longBreakButton">long break</button>
-    </div>
-    
-    <div id="timer">25:00</div>
-    
-      <div id="buttons">
-        <button id="startPauseButton" class="button startButton">start</button>
-        
-        <button id="resetButton" class="button" disabled>reset</button>
-        
-
-        <button id="fullscreen-btn">full screen</button>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="mode-buttons">
+            <button id="pomodoro" class="active"><span>Pomodoro</span></button>
+            <button id="short-break"><span>Short Break</span></button>
+            <button id="long-break"><span>Long Break</span></button>
         </div>
-    
-    <script src="script.js"></script>
-  </body>
+        <div id="timer">25:00</div>
+        <div class="control-buttons">
+            <button id="start-stop"><span>Start</span></button>
+            <button id="reset"><span>Reset</span></button>
+            <button id="tasks"><span>Tasks</span></button>
+        </div>
+    </div>
+    <div id="tasks-popup" class="popup">
+        <div class="popup-content">
+            <h2 class="centered">Tasks</h2>
+            <div class="task-input-container">
+                <input type="text" id="task-input" placeholder="Add a new task">
+                <button id="add-task"><span>Add</span></button>
+            </div>
+            <ul id="task-list"></ul>
+            <div class="popup-buttons">
+                <button id="clear-all"><span>Clear All</span></button>
+                <button id="close-popup"><span>Close</span></button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
 </html>
-
-
-
