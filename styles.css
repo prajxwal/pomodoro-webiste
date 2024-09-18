@@ -284,3 +284,178 @@ h2 {
     margin-top: 0;
     margin-bottom: 20px;
 }
+
+/* Settings button styles */
+#settings-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#settings-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+#settings-btn:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+#settings-btn svg {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease;
+}
+
+#settings-btn:hover svg {
+    transform: rotate(30deg);
+}
+
+/* Settings popup styles */
+.settings-popup-content {
+    width: 600px;
+    height: 400px;
+}
+
+.settings-layout {
+    display: flex;
+    height: calc(100% - 100px);
+}
+
+.settings-menu {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #ccc;
+    padding-right: 20px;
+}
+
+.settings-menu-btn {
+    margin: 5px 0;
+    text-align: left;
+    width: 100%;
+}
+
+.settings-menu-btn span {
+    width: 100%;
+    text-align: left;
+    padding: 0.75em 1em;
+}
+
+.settings-menu-btn.active span {
+    background: var(--button_outline_color);
+    color: var(--button_color);
+}
+
+.settings-content {
+    flex-grow: 1;
+    padding-left: 20px;
+    width: calc(100% - 170px);
+}
+
+.settings-content-section {
+    display: none;
+}
+
+.settings-content-section.active {
+    display: block;
+}
+
+.close-popup {
+    align-self: center;
+    margin-top: 20px;
+}
+
+/* Add these styles to your existing CSS */
+
+.timer-setting, .sound-setting {
+    margin-bottom: 15px;
+}
+
+.timer-setting label, .sound-setting label {
+    display: inline-block;
+    width: 200px;
+}
+
+.timer-setting input {
+    width: 60px;
+}
+
+#alarm-sound {
+    width: 150px;
+}
+
+#test-sound-btn {
+    margin-left: 10px;
+}
+
+.timer-setting {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.timer-setting label {
+    flex: 0 0 200px; /* Fixed width for labels */
+    margin-right: 10px;
+}
+
+.timer-setting input {
+    width: 60px;
+}
+
+.sound-setting {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap; /* Add this line */
+}
+
+.sound-setting label {
+    flex: 0 0 100%; /* Change this line */
+    margin-bottom: 5px; /* Add this line */
+}
+
+.sound-controls {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Add this line */
+}
+
+#alarm-sound {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+#test-sound-btn {
+    flex-shrink: 0;
+}
+
+.timer-settings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.timer-setting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.timer-setting label {
+    flex: 1;
+    text-align: left;
+    margin-right: 10px;
+}
