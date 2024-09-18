@@ -12,6 +12,8 @@ const addTaskBtn = document.getElementById('add-task');
 const taskList = document.getElementById('task-list');
 const clearAllBtn = document.getElementById('clear-all');
 
+const alarmSound = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3');
+
 let interval;
 let timeLeft = 25 * 60; // 25 minutes in seconds
 let isRunning = false;
@@ -40,8 +42,11 @@ function startTimer() {
             updateTimer();
         } else {
             clearInterval(interval);
-            alert('Time is up!');
-            reset();
+            alarmSound.play();
+            timer.textContent = "Time is Up!";
+            document.title = "Time is Up! - Pomodoro Timer";
+            isRunning = false;
+            startStopBtn.querySelector('span').textContent = 'Start';
         }
     }, 1000);
     startStopBtn.querySelector('span').textContent = 'Stop';
@@ -57,6 +62,7 @@ function stopTimer() {
 function reset() {
     stopTimer();
     setMode(currentMode);
+    updateTimer(); // Add this line to ensure the timer display is updated
 }
 
 function setMode(mode) {
